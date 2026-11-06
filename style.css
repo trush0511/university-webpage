@@ -1,0 +1,361 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#F8F4EA;
+    color:#333;
+}
+
+
+/* ---------------- HEADER ---------------- */
+
+
+header{
+    background:#EFE7D6;
+    text-align:center;
+    padding:30px;
+    border-bottom:4px solid #C7922F;
+}
+
+
+header h1{
+    color:#5A3B1E;
+    font-size:40px;
+}
+
+
+header p{
+    color:#666;
+    margin-top:8px;
+}
+
+
+/* ---------------- NAVBAR ---------------- */
+
+
+nav{
+    background:#EFE7D6;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:15px;
+    border-bottom:1px solid #d8c8a5;
+}
+
+
+nav a{
+    text-decoration:none;
+    color:#5A3B1E;
+    margin:10px 18px;
+    font-weight:bold;
+    font-size:16px;
+    transition:0.3s;
+}
+
+
+nav a:hover{
+    color:#C7922F;
+}
+
+
+/* ---------------- SECTIONS ---------------- */
+
+
+section{
+    width:90%;
+    margin:35px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    border-top:5px solid #C7922F;
+}
+
+
+section h2{
+    color:#5A3B1E;
+    margin-bottom:18px;
+    font-size:30px;
+}
+
+
+section p{
+    line-height:1.8;
+    color:#555;
+}
+
+
+ul{
+    margin-left:25px;
+    line-height:2;
+}
+
+
+/* ---------------- TABLE ---------------- */
+
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+
+th{
+    background:#C7922F;
+    color:white;
+    padding:15px;
+}
+
+
+td{
+    padding:15px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+
+tr:nth-child(even){
+    background:#FAF7EF;
+}
+
+
+tr:hover{
+    background:#FFF3D7;
+}
+
+
+/* ---------------- GALLERY ---------------- */
+
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-top:20px;
+}
+
+
+.gallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:.4s;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+
+/* ---------------- RECRUITERS ---------------- */
+
+
+.recruiters{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-top:20px;
+}
+
+
+.recruiters img{
+    width:100%;
+    background:white;
+    border:1px solid #ddd;
+    padding:20px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+
+.recruiters img:hover{
+    transform:translateY(-6px);
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+
+/* ---------------- FOOTER ---------------- */
+
+
+footer{
+    background:#EFE7D6;
+    margin-top:50px;
+    border-top:4px solid #C7922F;
+}
+
+
+.footer-container{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+    padding:40px 0;
+}
+
+
+.footer-box h3{
+    color:#5A3B1E;
+    margin-bottom:15px;
+}
+
+
+.footer-box p{
+    color:#666;
+    margin:10px 0;
+}
+
+
+.footer-box p:hover{
+    color:#C7922F;
+    cursor:pointer;
+}
+
+
+.footer-bottom{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid #d8c8a5;
+    color:#555;
+    background:#F8F4EA;
+}
+
+
+/* ---------------- BUTTON ---------------- */
+
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#C7922F;
+    color:white;
+    padding:12px 25px;
+    border-radius:5px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+
+.btn:hover{
+    background:#A8741E;
+}
+
+
+/* ---------------- RESPONSIVE ---------------- */
+
+
+@media(max-width:992px){
+
+
+.gallery{
+grid-template-columns:repeat(2,1fr);
+}
+
+
+.recruiters{
+grid-template-columns:repeat(2,1fr);
+}
+
+
+.footer-container{
+grid-template-columns:repeat(2,1fr);
+}
+
+
+}
+
+
+@media(max-width:768px){
+
+
+header h1{
+font-size:30px;
+}
+
+
+nav{
+flex-direction:column;
+align-items:center;
+}
+
+
+nav a{
+margin:8px;
+}
+
+
+section{
+width:95%;
+padding:20px;
+}
+
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+
+.gallery img{
+height:230px;
+}
+
+
+.recruiters{
+grid-template-columns:1fr;
+}
+
+
+.recruiters img{
+width:220px;
+margin:auto;
+}
+
+
+.footer-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+
+table{
+font-size:14px;
+}
+
+
+}
+
+
+@media(max-width:480px){
+
+
+header h1{
+font-size:24px;
+}
+
+
+header p{
+font-size:15px;
+}
+
+
+section h2{
+font-size:24px;
+}
+
+
+section p,
+section li{
+font-size:15px;
+}
+
+
+}
